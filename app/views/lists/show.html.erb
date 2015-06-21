@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<div class="table-responsize">
+	<table class="table">
+		<thead>
+			<tr>
+				<th><strong>Image:</strong></th>
+				<th><strong>Name:</strong></th>
+				<th><strong>Description:</strong></th>
+				<th><strong>Price:</strong></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><%= image_tag @list.image.url.to_s %></td>
+				<td class="warning"><%= @list.name %></td>
+				<td><%= @list.description %></td>
+				<td><%= @list.price %></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+<%= link_to 'Edit', edit_list_path(@list), class: "btn btn-link" %> |
+<%= link_to 'Back', lists_path, class: "btn btn-link" %>

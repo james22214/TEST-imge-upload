@@ -1,0 +1,37 @@
+<%= form_for @list, html:  { multipart:  true } do |f| %>
+  <% if @list.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@list.errors.count, "error") %> prohibited this list from being saved:</h2>
+
+      <ul>
+      <% @list.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :name %><br>
+    <%= f.text_field :name , class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :description %><br>
+    <%= f.text_area :description , class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :price %><br>
+    <%= f.text_field :price , class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :image %><br>
+    <%= f.file_field :image , class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :remote_image_url , "你的圖片上傳網址" %><br>
+    <%= f.text_field :remote_image_url, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.submit  class: "btn btn-info"%>
+  </div>
+<% end %>

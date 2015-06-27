@@ -5,13 +5,12 @@ gem 'therubyracer'
 gem 'less-rails-bootstrap'
 gem "paperclip", "~> 4.2"
 gem 'carrierwave'
-group :development do
+group :development, :lists do
   gem "brakeman", require: false
   gem "rails_best_practices", require: false
-end
-group :development, :lists do
   gem 'sqlite3'
 end
+
 group :production do
   gem 'pg'
   gem 'rails_12factor'

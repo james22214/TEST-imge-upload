@@ -7,17 +7,7 @@ gem "paperclip", "~> 4.2"
 gem 'carrierwave'
 gem "brakeman", require: false
 gem "rails_best_practices", require: false
-group :development, :lists do
-    # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug'
 
-  # Access an IRB console on exception pages or by using <%= console %> in views
-  gem 'web-console', '~> 2.0'
-
-  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'spring'
-  gem 'sqlite3','1.3.10'
-end
 
 group :production do
   gem 'pg'
@@ -55,5 +45,15 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+group :development, :test do
+  gem 'sqlite3','1.3.10'
+  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'byebug'
 
+  # Access an IRB console on exception pages or by using <%= console %> in views
+  gem 'web-console', '~> 2.0'
+
+  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+  gem 'spring'
+end
 

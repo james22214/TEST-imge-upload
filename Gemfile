@@ -8,7 +8,7 @@ gem 'carrierwave'
 gem "brakeman", require: false
 gem "rails_best_practices", require: false
 group :development, :lists do
-  gem 'sqlite3'
+  gem 'sqlite3','1.3.10'
 end
 
 group :production do

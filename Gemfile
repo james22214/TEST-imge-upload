@@ -5,9 +5,9 @@ gem 'therubyracer'
 gem 'less-rails-bootstrap'
 gem "paperclip", "~> 4.2"
 gem 'carrierwave'
+gem "brakeman", require: false
+gem "rails_best_practices", require: false
 group :development, :lists do
-  gem "brakeman", require: false
-  gem "rails_best_practices", require: false
   gem 'sqlite3'
 end
 

@@ -1,10 +1,11 @@
 source 'https://rubygems.org'
-ruby '2.0.0'
+
 #我的安裝
 gem 'therubyracer'
 gem 'less-rails-bootstrap'
-gem "paperclip", "~> 4.2"
 gem 'carrierwave'
+gem 'devise'
+gem 'responders'
 gem "brakeman", require: false
 gem "rails_best_practices", require: false
 

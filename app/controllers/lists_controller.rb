@@ -1,5 +1,6 @@
 class ListsController < ApplicationController
   before_action :set_list, only: [:show, :edit, :update, :destroy]
+  # before_action :authenticate_user!, only: [:show, :edit, :update, :destroy]
 
   # GET /lists
   # GET /lists.json
@@ -25,6 +26,8 @@ class ListsController < ApplicationController
   # POST /lists.json
   def create
     @list = List.new(list_params)
+    
+
     respond_to do |format|
       if @list.save
         format.html { redirect_to @list, notice: 'List was successfully created.' }
